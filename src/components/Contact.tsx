@@ -3,15 +3,15 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
 	return (
-		<div className="my-40 grid grid-cols-2 gap-30">
+		<div className="my-40 grid lg:grid-cols-2 lg:gap-30">
 			<div>
 				<div className="text-4xl relative mb-12">
 					<span className="block h-0.5 w-[140px] bg-primary absolute bottom-2 -left-30" />
 					<header className="ml-10">Contacts</header>
 				</div>
 
-				<p className="font-semibold text-5xl mb-5">Have a project?</p>
-				<p className="font-semibold text-5xl">Lets talk!</p>
+				<p className="font-semibold max-md:text-4xl text-5xl mb-5">Have a project?</p>
+				<p className="font-semibold max-md:text-4xl text-5xl">Lets talk!</p>
 			</div>
 
 			<div>

@@ -10,7 +10,7 @@ const Navbar = () => {
 						Ernest <span className="font-medium">Isaac</span>
 					</Link>
 
-					<nav>
+					<nav className="max-md:hidden">
 						<ul className="text-lg flex gap-6">
 							<li>
 								<Link href="/#about">About</Link>

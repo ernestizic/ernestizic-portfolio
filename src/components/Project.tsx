@@ -11,7 +11,11 @@ interface PropjectProps {
 }
 const Project = ({ project, right }: PropjectProps) => {
 	return (
-		<div className={cn("flex gap-20", { "flex-row-reverse": right })}>
+		<div
+			className={cn("flex gap-20 max-md:flex-col", {
+				"flex-row-reverse": right,
+			})}
+		>
 			<div className="flex-1">
 				<header className="text-2xl font-semibold">{project.title}</header>
 				<div className="flex flex-wrap items-center gap-2 mt-6 mb-4">
@@ -26,6 +30,15 @@ const Project = ({ project, right }: PropjectProps) => {
 				</div>
 
 				<p>{project.description}</p>
+
+				<div className="lg:hidden h-[200px] my-10 relative">
+					<Image
+						src={project.projectMedia}
+						alt={`${project.title} media`}
+						fill
+						className="object-contain"
+					/>
+				</div>
 
 				<div className="mt-8 flex items-center gap-10">
 					{!project.isPrivate && (
@@ -49,7 +62,7 @@ const Project = ({ project, right }: PropjectProps) => {
 				</div>
 			</div>
 
-			<div className="flex-1 h-[300px] relative">
+			<div className="max-md:hidden flex-1 h-[300px] relative">
 				<Image
 					src={project.projectMedia}
 					alt={`${project.title} media`}

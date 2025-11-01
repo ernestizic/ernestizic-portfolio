@@ -9,7 +9,7 @@ const ContentWrapper = ({
 	className?: string;
 }) => {
 	return (
-		<div className={cn("w-full max-w-[calc(100%-200px)] 2xl:px-0 2xl:max-w-7xl m-auto", className)}>
+		<div className={cn("w-full max-md:px-6 lg:max-w-[calc(100%-200px)] 2xl:px-0 2xl:max-w-7xl m-auto", className)}>
 			{children}
 		</div>
 	);

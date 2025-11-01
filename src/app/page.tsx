@@ -14,22 +14,22 @@ export default function Home() {
 
 			<div className="flex-1 mt-[72px]">
 				<ContentWrapper>
-					<div className="h-[calc(100vh-72px)] grid grid-cols-2">
+					<div className="h-[calc(100vh-72px)] grid lg:grid-cols-2">
 						<div className="flex items-center">
 							<div className="flex flex-col gap-20">
 								<div className="flex flex-col gap-6">
-									<p className="text-5xl font-semibold flex items-end gap-2">
+									<p className="text-4xl lg:text-5xl font-semibold flex items-end gap-2">
 										Hello
 										<span className="block size-4 bg-primary rounded-full mb-2" />
 									</p>
-									<div className="text-4xl relative">
+									<div className="text-2xl lg:text-4xl relative">
 										<span className="block h-0.5 w-[140px] bg-primary absolute bottom-2 -left-30" />
 										<p className="ml-10">
 											I&apos;m Isaac Ifeanyichukwu{" "}
 											<span className="max-2xl:hidden">Ernest</span>
 										</p>
 									</div>
-									<p className="text-5xl">
+									<p className="text-3xl lg:text-5xl">
 										<span className="max-2xl:hidden">Senior</span> Software
 										Engineer
 									</p>
@@ -48,7 +48,7 @@ export default function Home() {
 							</div>
 						</div>
 
-						<div className="flex items-center justify-center relative">
+						<div className="flex items-center justify-center relative max-md:hidden">
 							{/* Circle */}
 							<div className="aspect-square w-3/4 rounded-full bg-[#112633] relative flex items-center overflow-visible">
 								{/* Arrow line */}
@@ -84,8 +84,8 @@ export default function Home() {
 						</div>
 					</div>
 
-					<div className="text-center w-[85%] m-auto mt-40" id="about">
-						<div className="w-[500px] m-auto mb-10">
+					<div className="text-center lg:w-[85%] m-auto lg:mt-40" id="about">
+						<div className="lg:w-[500px] m-auto mb-10">
 							<h2 className="text-[32px] lg:text-[40px] font-semibold">
 								About Me
 							</h2>
