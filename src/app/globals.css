@@ -1,20 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #082130;
   --foreground: #171717;
+  --primary: #d75a0c;
+  --background-dim: #243743;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-background-dim: var(--background-dim);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #082130;
     --foreground: #ededed;
   }
 }
@@ -23,4 +27,48 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.curved-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%;
+  height: 140%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  pointer-events: none;
+}
+
+/* Draw the curved path */
+.curved-arrow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  clip-path: polygon(0 40%, 100% 0, 100% 60%, 0 100%);
+  animation: curveGlow 2.5s ease-in-out infinite alternate;
+}
+
+/* Icon styling */
+.icon-link {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-link:hover {
+  color: #ff6600;
+  transform: scale(1.2);
+}
+
+/* Glow animation */
+@keyframes curveGlow {
+  0% {
+    box-shadow: 0 0 6px rgba(255, 102, 0, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 16px rgba(255, 102, 0, 0.8);
+  }
 }

@@ -1,65 +1,119 @@
-import Image from "next/image";
+import Button from "@/components/Button";
+import ContentWrapper from "@/components/ContentWrapper";
+import FeaturedProjects from "@/components/FeaturedProjects";
+import Navbar from "@/components/Navbar";
+import { BsTwitterX } from "react-icons/bs";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+	return (
+		<div className="">
+			<Navbar />
+
+			<ContentWrapper>
+				<div className="h-[calc(100vh-72px)] grid grid-cols-2">
+					<div className="flex items-center">
+						<div className="flex flex-col gap-20">
+							<div className="flex flex-col gap-6">
+								<p className="text-5xl font-semibold flex items-end gap-2">
+									Hello
+									<span className="block size-4 bg-primary rounded-full mb-2" />
+								</p>
+								<div className="text-4xl relative">
+									<span className="block h-0.5 w-[140px] bg-primary absolute bottom-2 -left-30" />
+									<p className="ml-10">
+										I&apos;m Isaac Ifeanyichukwu{" "}
+										<span className="max-2xl:hidden">Ernest</span>
+									</p>
+								</div>
+								<p className="text-5xl">
+									<span className="max-2xl:hidden">Senior</span> Software
+									Engineer
+								</p>
+							</div>
+
+							<div className="flex gap-4">
+								<Button>Contact me</Button>
+								<a
+									href="/Isaac Ifeanyichukwu resume.pdf"
+									className="bg-inherit border-2 border-primary hover:bg-primary flex items-center justify-center gap-2 h-12 px-6 text-lg transition-all"
+									download
+								>
+									My Resume
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div className="flex items-center justify-center relative">
+						{/* Circle */}
+						<div className="aspect-square w-3/4 rounded-full bg-[#112633] relative flex items-center overflow-visible">
+							{/* Arrow line */}
+							<div className="curved-arrow"></div>
+
+							<div className="flex items-center justify-center w-full gap-6 text-2xl text-white">
+								<a
+									href="https://github.com/ernestizic"
+									target="_blank"
+									rel="noreferrer"
+									className="icon-link"
+								>
+									<FaGithub />
+								</a>
+								<a
+									href="https://linkedin.com/in/ernestizic"
+									target="_blank"
+									rel="noreferrer"
+									className="icon-link"
+								>
+									<FaLinkedin />
+								</a>
+								<a
+									href="https://twitter.com/ernestizic"
+									target="_blank"
+									rel="noreferrer"
+									className="icon-link"
+								>
+									<BsTwitterX />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div className="text-center w-[85%] m-auto mt-40">
+					<div className="w-[500px] m-auto mb-10">
+						<h2 className="text-[32px] lg:text-[40px] font-semibold">
+							About Me
+						</h2>
+						<div className="max-w-[1205px] flex mx-auto mt-7">
+							<span className="block h-0.5 w-full bg-primary" />
+							<span className="block h-0.5 w-[300px]" />
+							<span className="block h-0.5 w-full bg-primary" />
+						</div>
+					</div>
+
+					<div className="leading-8 text-lg">
+						<p>
+							I’m a Frontend-Leaning Full-Stack Engineer with 4+ years
+							experience building sleek, scalable, and intuitive web
+							applications. I have a passion for building and contributing to
+							solutions that solve real problems.
+						</p>
+						<p>
+							I&apos;m not just about code, I&apos;m a mentor and team player,
+							and I&apos;m always looking for ways to improve my craft and make
+							development process more seamless and efficient.
+						</p>
+						<p>
+							When I&apos;m not working, you&apos;d probably find me lost in a
+							movie marathon or playing video games 😅
+						</p>
+					</div>
+				</div>
+
+				<FeaturedProjects />
+			</ContentWrapper>
+		</div>
+	);
 }
