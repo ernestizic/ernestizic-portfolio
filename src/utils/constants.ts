@@ -11,7 +11,7 @@ export const projects = [
 	},
 	{
 		title: "Sembly",
-		labels: ["TypeScript", "NextJS", "TailwindCSS"],
+		labels: ["TypeScript", "NextJS", "TailwindCSS", "Zustand"],
 		description:
 			"Sembly is a social media management and scheduling tool to help brands plan and schedule their posts on all platforms. It also helps in ensuring posts gets all the needed approvals before getting sent out. The Github repository for this is private at the moment.",
 		githubUrl: "",

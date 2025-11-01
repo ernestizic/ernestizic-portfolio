@@ -3,7 +3,7 @@ import ContentWrapper from "./ContentWrapper";
 
 const Navbar = () => {
 	return (
-		<div className="h-[72px] flex items-center sticky top-0 z-10 bg-background">
+		<div className="h-[72px] flex items-center fixed w-full top-0 z-10 bg-background">
 			<ContentWrapper>
 				<div className="flex items-center justify-between">
 					<Link href="/" className="font-semibold text-2xl">
@@ -13,13 +13,13 @@ const Navbar = () => {
 					<nav>
 						<ul className="text-lg flex gap-6">
 							<li>
-								<Link href="/">About</Link>
+								<Link href="/#about">About</Link>
 							</li>
 							<li>
-								<Link href="/">Projects</Link>
+								<Link href="/#projects">Projects</Link>
 							</li>
 							<li>
-								<Link href="/">Contact</Link>
+								<Link href="/#contact">Contact</Link>
 							</li>
 						</ul>
 					</nav>

@@ -3,7 +3,7 @@ import Project from "./Project";
 
 const FeaturedProjects = () => {
 	return (
-		<div className="my-50">
+		<div className="my-50" id="projects">
 			<header className="text-center">
 				<h2 className="text-[32px] lg:text-[40px] font-semibold">
 					Featured projects
