@@ -22,7 +22,7 @@ const Project = ({ project, right }: PropjectProps) => {
 					{project.labels?.map((item, idx) => (
 						<span
 							key={idx}
-							className="bg-background-dim block py-1 px-4 w-max rounded-2xl"
+							className="bg-background-dim block py-1 px-4 w-max rounded-2xl text-inner"
 						>
 							{item}
 						</span>
@@ -67,7 +67,7 @@ const Project = ({ project, right }: PropjectProps) => {
 					src={project.projectMedia}
 					alt={`${project.title} media`}
 					fill
-					className="object-contain"
+					className="object-contain shadow-2xl"
 				/>
 			</div>
 		</div>

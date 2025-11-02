@@ -14,7 +14,7 @@ const Button = ({
 }: ButtonProps) => {
 	const btnVariants = {
 		outline: "bg-inherit border-2 border-primary hover:bg-primary",
-		default: "bg-[#b94c08] hover:bg-primary",
+		default: "bg-[#b94c08] hover:bg-primary text-inner",
 	};
 
 	return (

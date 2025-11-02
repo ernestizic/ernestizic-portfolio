@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #082130;
+  --background: #fff;
   --foreground: #171717;
+  --inner: #fff;
   --primary: #d75a0c;
   --background-dim: #243743;
 }
@@ -12,6 +13,7 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-background-dim: var(--background-dim);
+  --color-inner: var(--inner);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
