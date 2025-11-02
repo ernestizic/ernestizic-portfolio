@@ -1,4 +1,3 @@
-import Button from "@/components/Button";
 import Contact from "@/components/Contact";
 import ContentWrapper from "@/components/ContentWrapper";
 import FeaturedProjects from "@/components/FeaturedProjects";
@@ -36,7 +35,12 @@ export default function Home() {
 								</div>
 
 								<div className="flex gap-4">
-									<Button>Contact me</Button>
+									<a
+										href="#contact"
+										className="flex items-center justify-center gap-2 h-12 px-6 text-lg transition-all bg-[#b94c08] hover:bg-primary"
+									>
+										Contact me
+									</a>
 									<a
 										href="/Isaac Ifeanyichukwu resume.pdf"
 										className="bg-inherit border-2 border-primary hover:bg-primary flex items-center justify-center gap-2 h-12 px-6 text-lg transition-all"
